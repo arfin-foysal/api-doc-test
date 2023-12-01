@@ -19,11 +19,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->group(function () {
+
+});
 Route::get('all-todo',[TodoController::class,'allTodo']);
 Route::get('todo/{id}',[TodoController::class,'singleTodo']);
 Route::post('create-todo',[TodoController::class,'createTodo']);
 Route::put('update-todo/{id}',[TodoController::class,'updateTodo']);
 Route::delete('delete-todo/{id}',[TodoController::class,'deleteTodo']);
-});
 
-Route::post('login',[AuthController::class,'login']);
+// Route::post('login',[AuthController::class,'login']);
